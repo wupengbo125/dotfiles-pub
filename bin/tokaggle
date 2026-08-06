@@ -1,0 +1,2 @@
+rm -f ~/.ssh/known_hosts
+ssh root@47.93.153.109 -p 5555

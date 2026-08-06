@@ -1,0 +1,5 @@
+model:
+  provider: custom
+  base_url: ${AI_API}
+  api_key: ${AI_API_KEY}
+  default: ${MODEL_ID}

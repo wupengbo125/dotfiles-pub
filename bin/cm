@@ -1,0 +1,3 @@
+#!/bin/bash
+msg="${1:-debug}"
+git add . && git commit -m "$msg" && git push

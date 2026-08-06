@@ -1,0 +1,67 @@
+#!/bin/bash
+# Environment variables
+
+# AI (Provider 1 - 默认)
+export PROVIDER_NAME="peng-min"
+export AI_API=https://api.xiaomimimo.com/v1
+export AI_API_ANTH=https://api.xiaomimimo.com/anthropic
+export AI_API_KEY=YOUR_AI_API_KEY
+export MODEL_ID="mimo-v2.5"
+export MODEL_ID_2="mimo-v2.5-pro"
+
+# AI Provider 2 
+export PROVIDER_2_NAME="peng-nvidia"
+export AI_API_2="https://integrate.api.nvidia.com/v1"
+export AI_API_ANTH_2="https://integrate.api.nvidia.com/anthropic"
+export AI_API_KEY_2="YOUR_AI_API_KEY_2"
+export nvidia_token=$AI_API_KEY_2
+
+export MODEL_2_1="nvidia/nemotron-3-super-120b-a12b"
+export MODEL_2_2="openai/gpt-oss-120b"
+export MODEL_2_3="nvidia/nemotron-3-ultra-550b-a55b"
+export MODEL_2_4="deepseek-ai/deepseek-v4-flash"
+export MODEL_2_5="deepseek-ai/deepseek-v4-pro"
+export MODEL_2_6="minimaxai/minimax-m3-xxx"
+
+# AI Provider 3 (硅基流动 SiliconFlow)
+export SILICONFLOW_API_URL="https://api.siliconflow.cn/v1"
+export SILICONFLOW_API_KEY="YOUR_SILICONFLOW_API_KEY"
+export SILICONFLOW_EMBEDDING_MODEL_ID="BAAI/bge-m3"
+
+# Video
+Pexels_API_Key=YOUR_PEXELS_API_KEY
+
+# Claude Code
+export ANTHROPIC_BASE_URL=$AI_API_ANTH
+export ANTHROPIC_AUTH_TOKEN=$AI_API_KEY
+export ANTHROPIC_MODEL=$MODEL_ID
+
+# Carefree
+export CF_AI_API=$AI_API
+export CF_AI_API_KEY=$AI_API_KEY
+export CF_MODEL_ID=$MODEL_ID
+
+# MiniMax CN
+export MINIMAX_CN_API_KEY=YOUR_MINIMAX_CN_API_KEY
+# Kaggle
+export KAGGLE_API_TOKEN=YOUR_KAGGLE_API_TOKEN
+export KAGGLE_USER=YOUR_KAGGLE_USER
+
+# Tushare
+export TUSHARE_TOKEN="YOUR_TUSHARE_TOKEN"
+
+# GitHub
+export GITHUB_TOKEN="YOUR_GITHUB_TOKEN"
+
+# Secrets
+export common_password="YOUR_COMMON_PASSWORD"
+export ths_password="YOUR_THS_PASSWORD"
+export tencent_CloudStudioKey="YOUR_TENCENT_CLOUD_STUDIO_KEY"
+
+# Google Cloud
+export GOOGLE_CLOUD_PROJECT="freedom-471602"
+
+# Cloudflare API
+export CLOUDFLARE_API_TOKEN="YOUR_CLOUDFLARE_API_TOKEN"
+export CLOUDFLARE_ACCOUNT_ID="YOUR_CLOUDFLARE_ACCOUNT_ID"
+

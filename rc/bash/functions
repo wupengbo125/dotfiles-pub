@@ -1,0 +1,31 @@
+#!/bin/bash
+# Function definitions
+
+# Copy file content to clipboard
+ccc () {
+    if [ -f "$1" ]; then
+        if command -v clip >/dev/null 2>&1; then
+            cat "$1" | iconv -f UTF-8 -t UTF-16LE | clip
+        elif command -v xclip >/dev/null 2>&1; then
+            cat "$1" | xclip -selection clipboard
+        else
+            echo "❌ No clipboard tool found (install xclip on Linux)"
+            return 1
+        fi
+        echo "✔ Copied $1 to clipboard"
+    else
+        echo "❌ File not found: $1"
+    fi
+}
+
+function zm {
+  sudo systemctl start gdm3
+  sudo systemctl restart anydesk
+}
+
+function kzm {
+  sudo systemctl stop anydesk
+  sudo systemctl stop gdm3
+}
+
+

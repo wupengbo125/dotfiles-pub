@@ -1,0 +1,41 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "provider": {
+        "${PROVIDER_NAME}": {
+            "name": "${PROVIDER_NAME}",
+            "env": [
+                "${PROVIDER_NAME}"
+            ],
+            "npm": "@ai-sdk/openai-compatible",
+            "options": {
+                "baseURL": "${AI_API}"
+            },
+            "models": {
+                "${MODEL_ID}": {
+                    "name": "${MODEL_ID}"
+                },
+                "${MODEL_ID_2}": {
+                    "name": "${MODEL_ID_2}"
+                }
+            }
+        },
+        "${PROVIDER_2_NAME}": {
+            "name": "${PROVIDER_2_NAME}",
+            "env": [
+                "${PROVIDER_2_NAME}"
+            ],
+            "npm": "@ai-sdk/openai-compatible",
+            "options": {
+                "baseURL": "${AI_API_2}"
+            },
+            "models": {
+                "${MODEL_2_1}": { "name": "${MODEL_2_1}" },
+                "${MODEL_2_2}": { "name": "${MODEL_2_2}" },
+                "${MODEL_2_3}": { "name": "${MODEL_2_3}" },
+                "${MODEL_2_4}": { "name": "${MODEL_2_4}" },
+                "${MODEL_2_5}": { "name": "${MODEL_2_5}" },
+                "${MODEL_2_6}": { "name": "${MODEL_2_6}" }
+            }
+        }
+    }
+}

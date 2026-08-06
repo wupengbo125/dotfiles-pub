@@ -1,0 +1,15 @@
+**/nohup.out
+
+# Python & UV
+.venv/
+.omc
+.mimo
+.codegraph
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Node.js
+node_modules/
+

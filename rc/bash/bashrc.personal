@@ -1,0 +1,19 @@
+#!/bin/bash
+# ============================================
+# Personal bashrc - mathias/dotfiles style
+# ============================================
+
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+
+# Add bin/ to PATH
+export PATH="$DOTFILES_DIR/bin:$PATH"
+
+# Source in order: path → exports → aliases → functions
+for f in path exports aliases functions; do
+    . "$DOTFILES_DIR/rc/bash/$f"
+done
+
+# Windows-specific config
+if [[ "$OSTYPE" == msys* || "$OSTYPE" == cygwin* ]]; then
+    . "$DOTFILES_DIR/rc/bash/windowsrc"
+fi

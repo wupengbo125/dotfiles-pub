@@ -1,0 +1,18 @@
+[user]
+	email = wupengbo125@qq.com
+	name = wupengbo
+[core]
+	quotepath = false
+	autocrlf = false
+[i18n]
+	commitEncoding = utf-8
+	logOutputEncoding = utf-8
+[safe]
+	directory = *
+[credential]
+	helper = store
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

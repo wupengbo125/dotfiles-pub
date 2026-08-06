@@ -1,0 +1,109 @@
+#!/bin/bash
+
+# Claude model selection script
+# Auto load exports configuration
+. "$(dirname "$0")/../rc/bash/exports"
+
+echo "Select Claude model:"
+echo "1) mimo-v2.5-pro"
+echo "2) Provider 1 - Model 2 (${MODEL_ID_2})"
+echo "3) Provider 1 - Default (${MODEL_ID})"
+echo "4) Provider 2 - Model 1 (${MODEL_2_1})"
+echo "5) Provider 2 - Model 2 (${MODEL_2_2})"
+echo "6) Provider 2 - Model 3 (${MODEL_2_3})"
+echo "7) Provider 2 - Model 4 (${MODEL_2_4})"
+echo "8) Provider 2 - Model 5 (${MODEL_2_5})"
+echo "9) Provider 2 - Model 6 (${MODEL_2_6})"
+
+read -p "Enter choice : " choice
+
+case $choice in
+    1)
+        export ANTHROPIC_BASE_URL='https://token-plan-cn.xiaomimimo.com/anthropic'
+        export ANTHROPIC_AUTH_TOKEN="YOUR_ANTHROPIC_AUTH_TOKEN"
+        export ANTHROPIC_MODEL="mimo-v2.5-pro"
+        export ANTHROPIC_DEFAULT_HAIKU_MODEL="mimo-v2.5-pro"
+        export ANTHROPIC_DEFAULT_SONNET_MODEL="mimo-v2.5-pro"
+        export ANTHROPIC_DEFAULT_OPUS_MODEL="mimo-v2.5-pro"
+        export ANTHROPIC_DEFAULT_FABLE_MODEL="mimo-v2.5-pro"
+        ;;
+    2)
+        export ANTHROPIC_BASE_URL="${AI_API}"
+        export ANTHROPIC_AUTH_TOKEN="${AI_API_KEY}"
+        export ANTHROPIC_MODEL="${MODEL_ID_2}"
+        export ANTHROPIC_DEFAULT_HAIKU_MODEL="${MODEL_ID_2}"
+        export ANTHROPIC_DEFAULT_SONNET_MODEL="${MODEL_ID_2}"
+        export ANTHROPIC_DEFAULT_OPUS_MODEL="${MODEL_ID_2}"
+        export ANTHROPIC_DEFAULT_FABLE_MODEL="${MODEL_ID_2}"
+        ;;
+    3)
+        export ANTHROPIC_BASE_URL="${AI_API}"
+        export ANTHROPIC_AUTH_TOKEN="${AI_API_KEY}"
+        export ANTHROPIC_MODEL="${MODEL_ID}"
+        export ANTHROPIC_DEFAULT_HAIKU_MODEL="${MODEL_ID_2}"
+        export ANTHROPIC_DEFAULT_SONNET_MODEL="${MODEL_ID_2}"
+        export ANTHROPIC_DEFAULT_OPUS_MODEL="${MODEL_ID}"
+        export ANTHROPIC_DEFAULT_FABLE_MODEL="${MODEL_ID}"
+        ;;
+    4)
+        export ANTHROPIC_BASE_URL="${AI_API_ANTH_2}"
+        export ANTHROPIC_AUTH_TOKEN="${AI_API_KEY_2}"
+        export ANTHROPIC_MODEL="${MODEL_2_1}"
+        export ANTHROPIC_DEFAULT_HAIKU_MODEL="${MODEL_2_1}"
+        export ANTHROPIC_DEFAULT_SONNET_MODEL="${MODEL_2_1}"
+        export ANTHROPIC_DEFAULT_OPUS_MODEL="${MODEL_2_1}"
+        export ANTHROPIC_DEFAULT_FABLE_MODEL="${MODEL_2_1}"
+        ;;
+    5)
+        export ANTHROPIC_BASE_URL="${AI_API_ANTH_2}"
+        export ANTHROPIC_AUTH_TOKEN="${AI_API_KEY_2}"
+        export ANTHROPIC_MODEL="${MODEL_2_2}"
+        export ANTHROPIC_DEFAULT_HAIKU_MODEL="${MODEL_2_2}"
+        export ANTHROPIC_DEFAULT_SONNET_MODEL="${MODEL_2_2}"
+        export ANTHROPIC_DEFAULT_OPUS_MODEL="${MODEL_2_2}"
+        export ANTHROPIC_DEFAULT_FABLE_MODEL="${MODEL_2_2}"
+        ;;
+    6)
+        export ANTHROPIC_BASE_URL="${AI_API_ANTH_2}"
+        export ANTHROPIC_AUTH_TOKEN="${AI_API_KEY_2}"
+        export ANTHROPIC_MODEL="${MODEL_2_3}"
+        export ANTHROPIC_DEFAULT_HAIKU_MODEL="${MODEL_2_3}"
+        export ANTHROPIC_DEFAULT_SONNET_MODEL="${MODEL_2_3}"
+        export ANTHROPIC_DEFAULT_OPUS_MODEL="${MODEL_2_3}"
+        export ANTHROPIC_DEFAULT_FABLE_MODEL="${MODEL_2_3}"
+        ;;
+    7)
+        export ANTHROPIC_BASE_URL="${AI_API_ANTH_2}"
+        export ANTHROPIC_AUTH_TOKEN="${AI_API_KEY_2}"
+        export ANTHROPIC_MODEL="${MODEL_2_4}"
+        export ANTHROPIC_DEFAULT_HAIKU_MODEL="${MODEL_2_4}"
+        export ANTHROPIC_DEFAULT_SONNET_MODEL="${MODEL_2_4}"
+        export ANTHROPIC_DEFAULT_OPUS_MODEL="${MODEL_2_4}"
+        export ANTHROPIC_DEFAULT_FABLE_MODEL="${MODEL_2_4}"
+        ;;
+    8)
+        export ANTHROPIC_BASE_URL="${AI_API_ANTH_2}"
+        export ANTHROPIC_AUTH_TOKEN="${AI_API_KEY_2}"
+        export ANTHROPIC_MODEL="${MODEL_2_5}"
+        export ANTHROPIC_DEFAULT_HAIKU_MODEL="${MODEL_2_5}"
+        export ANTHROPIC_DEFAULT_SONNET_MODEL="${MODEL_2_5}"
+        export ANTHROPIC_DEFAULT_OPUS_MODEL="${MODEL_2_5}"
+        export ANTHROPIC_DEFAULT_FABLE_MODEL="${MODEL_2_5}"
+        ;;
+    9)
+        export ANTHROPIC_BASE_URL="${AI_API_ANTH_2}"
+        export ANTHROPIC_AUTH_TOKEN="${AI_API_KEY_2}"
+        export ANTHROPIC_MODEL="${MODEL_2_6}"
+        export ANTHROPIC_DEFAULT_HAIKU_MODEL="${MODEL_2_6}"
+        export ANTHROPIC_DEFAULT_SONNET_MODEL="${MODEL_2_6}"
+        export ANTHROPIC_DEFAULT_OPUS_MODEL="${MODEL_2_6}"
+        export ANTHROPIC_DEFAULT_FABLE_MODEL="${MODEL_2_6}"
+        ;;
+    *)
+        echo "Error: Invalid choice"
+        exit 1
+        ;;
+esac
+
+echo "Environment variables set for $ANTHROPIC_MODEL ($ANTHROPIC_BASE_URL)"
+claude --dangerously-skip-permissions

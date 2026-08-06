@@ -1,0 +1,56 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+
+ipv6: false
+
+external-controller: 127.0.0.1:9090
+external-ui: ./ui
+
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - +.sgroup.qq.com
+    - +.bots.qq.com
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  fallback:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+
+proxy-providers:
+  mysub:
+    type: http
+    url: "https://47.238.236.131/iv/verify_mode.htm?token=YOUR_SUBSCRIPTION_TOKEN&sid=nano"
+    interval: 3600
+    path: ./sub.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    use:
+      - mysub
+
+rules:
+  - GEOIP,CN,DIRECT
+  - MATCH,PROXY

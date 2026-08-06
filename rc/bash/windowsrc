@@ -1,0 +1,27 @@
+#!/bin/bash
+# Windows-specific configuration (Git Bash / MSYS2 / Cygwin)
+
+# Applications
+alias excel='/c/Program\ Files/Microsoft\ Office/root/Office16/EXCEL.EXE'
+alias wscp='WinSCP'
+
+# Utilities
+alias pkill='taskkill //IM  '
+
+# PATH
+[ -d "/mingw64/bin" ] && export PATH="/mingw64/bin:$PATH"
+[ -d "/d/portable" ] && export PATH="/d/portable:$PATH"
+
+# Exports
+export wingit="/mnt/c/Users/wupen/home/github/"
+
+# SSH tunnel (Windows only)
+ksd () {
+    taskkill -F -IM ssh.exe -T
+}
+
+sd () {
+    taskkill -F -IM ssh.exe -T
+    ssh -f -N -p 2222 -L 18888:127.0.0.1:18789 pengbo@47.93.153.109
+    ssh -f -N -p 2222 -L 8888:127.0.0.1:9090 pengbo@47.93.153.109
+}

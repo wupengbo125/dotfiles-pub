@@ -1,0 +1,2 @@
+#!/bin/bash
+uv run --no-project "$(dirname "$0")/../tools/mihomo/mihomo.py" "$@"

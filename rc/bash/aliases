@@ -1,0 +1,77 @@
+#!/bin/bash
+# Alias definitions
+
+# Network
+alias goo='curl -s -o /dev/null -w "HTTP %{http_code}\n" --connect-timeout 5 -x http://127.0.0.1:7890 https://www.google.com'
+
+
+# Shell
+alias sh=bash
+
+# Navigation
+alias ..='cd ..'
+alias 。。='cd ..'
+alias .ba='git -C "$DOTFILES_DIR" pull && bash "$DOTFILES_DIR/install.sh" && . ~/.bashrc'
+alias .baa='git -C "$DOTFILES_DIR" fetch --all && git -C "$DOTFILES_DIR" reset --hard origin/main && bash "$DOTFILES_DIR/install.sh" && . ~/.bashrc'
+alias vba="vim $DOTFILES_DIR/rc/bash/bashrc.personal"
+alias vaa="vim $DOTFILES_DIR/rc/bash/aliases"
+alias vee="vim $DOTFILES_DIR/rc/bash/exports"
+alias vpp="vim $DOTFILES_DIR/rc/bash/path"
+
+# Git/Project shortcuts
+alias ff='sh ~/home/github/carefree/run.sh'
+alias jj='sh ~/home/github/carefree/miauto2ths/run.sh'
+
+# Git subtree
+alias pullastock="git subtree pull --prefix=a-stock-data https://github.com/simonlin1212/a-stock-data.git main --squash"
+
+# Force pull current branch (discard local changes, sync to upstream)
+alias pulll='git fetch --all && git reset --hard "@{u}" && git clean -fdx'
+
+# K-line viewer (stock analysis)
+alias btest='python ~/home/github/carefree/kline/backtest_curve.py --pre-kline-number 80 --ma 5,10,30 -c '
+alias cline='python ~/home/github/carefree/kline/kline_viewer.py --ma 5,10,30 --concept '
+alias kline='python ~/home/github/carefree/kline/kline_viewer.py -t 120 --ma 5,10,20,30 -c '
+
+# Stock tools
+alias fstock='python ~/home/github/carefree/tools/find_stock.py  '
+alias knb='python ~/home/github/carefree/tools/keep_nb_stock.py  --nbg-rank 2000  --csv '
+alias knbc='python ~/home/github/carefree/kline/keep_nb_stock.py   '
+alias qlj='python ~/home/github/carefree/kline/keep_nb_stock.py --ljg --csv '
+
+# Coordinates
+alias zb='python ~/home/github/carefree/miauto2ths/coords.py '
+
+# AI tools
+alias claude="claude --dangerously-skip-permissions"
+alias anti='"/c/Users/wupen/AppData/Local/Programs/Antigravity IDE/bin/antigravity-ide"'
+
+
+# SSH / Remote
+alias moshha='mosh --ssh="ssh -p 2222" pengbo@47.93.153.109'
+alias hasee="ssh pengbo@47.93.153.109 -p 2222"
+
+# Zellij sessions
+alias zaaa="zellij attach -c aaa"
+alias zbbb="zellij attach -c bbb"
+alias zccc="zellij attach -c ccc"
+alias ze="zellij"
+
+# Utilities
+alias ll='ls -alF --color=auto --show-control-chars'
+alias la='ls -A --color=auto --show-control-chars'
+alias l='ls -CF --color=auto --show-control-chars'
+alias psg="ps -ef|grep"
+
+
+# python
+alias ur="uv run"
+
+
+# skills
+alias skills='bash "$DOTFILES_DIR/install_skill.sh"'
+alias mattq='npx skills@latest add mattpocock/skills -s grill-me triage tdd -a claude-code -y'
+
+alias matt="npx skills@latest add mattpocock/skills"
+alias superpower='git clone --depth 1 https://github.com/obra/superpowers.git .superpowers-tmp && mkdir -p .agents/skills && cp -r .superpowers-tmp/skills/* .agents/skills/ && rm -rf .superpowers-tmp'
+

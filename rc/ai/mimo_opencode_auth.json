@@ -1,0 +1,10 @@
+{
+    "${PROVIDER_NAME}": {
+        "type": "api",
+        "key": "${AI_API_KEY}"
+    },
+    "${PROVIDER_2_NAME}": {
+        "type": "api",
+        "key": "${AI_API_KEY_2}"
+    }
+}

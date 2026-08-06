@@ -1,0 +1,2 @@
+# 通用 JSON 环境变量渲染工具配置文件
+exports_file: "rc/bash/exports"

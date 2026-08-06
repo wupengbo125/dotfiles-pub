@@ -1,0 +1,8 @@
+models:
+  # Most popular on NVIDIA NIM
+  - nvidia/nemotron-3-super-120b-a12b
+  - nvidia/nemotron-3-ultra-550b-a55b
+  - openai/gpt-oss-120b
+  - deepseek-ai/deepseek-v4-flash
+  - qwen/qwen3.5-397b-a17b
+  - deepseek-ai/deepseek-v4-pro
