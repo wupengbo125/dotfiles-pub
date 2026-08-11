@@ -1,5 +1,5 @@
 ---
-name: wsl_chrome
+name: vx-wsl-chrome
 description: |
   Use this skill whenever you need to control or automate a browser in this WSL environment.
   Since WSL does not have a native Linux Chrome installation, this skill provides a way to 

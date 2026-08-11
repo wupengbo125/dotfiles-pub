@@ -1,5 +1,5 @@
 ---
-name: project-handoff
+name: vx-handoff
 description: Save a high-signal project handoff in the current workspace so a fresh agent can seamlessly continue.
 argument-hint: "what will the next session focus on?"
 disable-model-invocation: true

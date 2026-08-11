@@ -1,5 +1,5 @@
 ---
-name: simplifying
+name: vx-simplifying
 description: 用最精简的代码解决问题。当用户要求简化代码、重构、或写新脚本时触发。核心原则：砍掉一切"以防万一"的代码，只留"一定发生"的逻辑。
 ---
 
