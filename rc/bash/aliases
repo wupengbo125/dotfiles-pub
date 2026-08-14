@@ -19,8 +19,8 @@ alias vee="vim $DOTFILES_DIR/rc/bash/exports"
 alias vpp="vim $DOTFILES_DIR/rc/bash/path"
 
 # Git/Project shortcuts
-alias ff='sh ~/home/github/carefree/run.sh'
-alias jj='sh ~/home/github/carefree/miauto2ths/run.sh'
+alias ff='sh $github_dir/carefree/run.sh'
+alias jj='sh $github_dir/carefree/miauto2ths/run.sh'
 
 # Git subtree
 alias pullastock="git subtree pull --prefix=a-stock-data https://github.com/simonlin1212/a-stock-data.git main --squash"
@@ -29,18 +29,18 @@ alias pullastock="git subtree pull --prefix=a-stock-data https://github.com/simo
 alias pulll='git fetch --all && git reset --hard "@{u}" && git clean -fdx'
 
 # K-line viewer (stock analysis)
-alias btest='python ~/home/github/carefree/kline/backtest_curve.py --pre-kline-number 80 --ma 5,10,30 -c '
-alias cline='python ~/home/github/carefree/kline/kline_viewer.py --ma 5,10,30 --concept '
-alias kline='python ~/home/github/carefree/kline/kline_viewer.py -t 120 --ma 5,10,20,30 -c '
+alias btest='python $github_dir/carefree/kline/backtest_curve.py --pre-kline-number 80 --ma 5,10,30 -c '
+alias cline='python $github_dir/carefree/kline/kline_viewer.py --ma 5,10,30 --concept '
+alias kline='python $github_dir/carefree/kline/kline_viewer.py -t 120 --ma 5,10,20,30 -c '
 
 # Stock tools
-alias fstock='python ~/home/github/carefree/tools/find_stock.py  '
-alias knb='python ~/home/github/carefree/tools/keep_nb_stock.py  --nbg-rank 2000  --csv '
-alias knbc='python ~/home/github/carefree/kline/keep_nb_stock.py   '
-alias qlj='python ~/home/github/carefree/kline/keep_nb_stock.py --ljg --csv '
+alias fstock='python $github_dir/carefree/tools/find_stock.py  '
+alias knb='python $github_dir/carefree/tools/keep_nb_stock.py  --nbg-rank 2000  --csv '
+alias knbc='python $github_dir/carefree/kline/keep_nb_stock.py   '
+alias qlj='python $github_dir/carefree/kline/keep_nb_stock.py --ljg --csv '
 
 # Coordinates
-alias zb='python ~/home/github/carefree/miauto2ths/coords.py '
+alias zb='python $github_dir/carefree/miauto2ths/coords.py '
 
 # AI tools
 alias claude="claude --dangerously-skip-permissions"

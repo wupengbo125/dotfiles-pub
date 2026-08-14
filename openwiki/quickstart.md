@@ -31,8 +31,8 @@ A personal environment configuration and blueprint-driven Agent development skil
 ## First-Time Setup
 
 ```bash
-git clone https://github.com/wupengbo125/dotfiles.git ~/home/github/dotfiles
-bash ~/home/github/dotfiles/install.sh
+git clone https://github.com/wupengbo125/dotfiles.git $github_dir/dotfiles
+bash $github_dir/dotfiles/install.sh
 ```
 
 The installer (`install.sh`) performs these steps idempotently:

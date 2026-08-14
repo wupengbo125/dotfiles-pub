@@ -44,9 +44,9 @@ Configurable at the top of `install_skill.sh`:
 ```bash
 SKILL_SOURCES=(
     "$DOTFILES_DIR/skills"
-    "$HOME/home/github/anth-skills/skills/skills"
-    "$HOME/home/github/matt-skills/skills/skills/engineering"
-    "$HOME/home/github/matt-skills/skills/skills/productivity"
+    "$github_dir/anth-skills/skills/skills"
+    "$github_dir/matt-skills/skills/skills/engineering"
+    "$github_dir/matt-skills/skills/skills/productivity"
 )
 ```
 

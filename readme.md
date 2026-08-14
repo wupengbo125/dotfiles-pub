@@ -15,8 +15,8 @@ echo 'https://YOUR_USERNAME:YOUR_GITHUB_TOKEN@github.com' > ~/.git-credentials
 **Step 2**: Clone 仓库并一键安装
 
 ```bash
-git clone https://github.com/wupengbo125/dotfiles.git ~/home/github/dotfiles
-bash ~/home/github/dotfiles/install.sh
+git clone https://github.com/wupengbo125/dotfiles.git $github_dir/dotfiles
+bash $github_dir/dotfiles/install.sh
 ```
 
 ---
